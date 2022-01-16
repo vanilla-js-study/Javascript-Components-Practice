@@ -1,6 +1,9 @@
-import '../styles/reset.scss';
+import '../styles/index.scss';
+import { isCalledWithNew } from '../utils';
+import Button from './Button';
 
-function App({ $app }) {
-  console.log($app);
+function App({ $target }) {
+  isCalledWithNew(new.target);
+  (() => new Button({ $target, text: 'click me!' }))();
 }
 export default App;
