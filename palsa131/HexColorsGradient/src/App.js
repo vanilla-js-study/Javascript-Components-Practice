@@ -11,14 +11,15 @@ export default function App({targetEl}){
 	}
 
 	const guideTextEl = document.createElement('h1');
+	guideTextEl.textContent = 'CLICK THE BUTTON BELLOW TO GENERATE A RANDOM GRADIENT HEX COLOR COMBINATION'
+
 	const backgroundInfoTextEl = document.createElement('h2');
+	
+	targetEl.appendChild(guideTextEl);
+	targetEl.appendChild(backgroundInfoTextEl);
 
 	this.render = ()=>{
-		guideTextEl.textContent = 'CLICK THE BUTTON BELLOW TO GENERATE A RANDOM GRADIENT HEX COLOR COMBINATION'
 		backgroundInfoTextEl.textContent = `background: linear-gradient(to right, ${this.state.linearGradient[0]}, ${this.state.linearGradient[1]});`
-		
-		targetEl.appendChild(guideTextEl);
-		targetEl.appendChild(backgroundInfoTextEl);
 	}
 
 	const button = new Button({
