@@ -27,7 +27,12 @@ export default function App({targetEl}){
 			value: 'Change!!'
 		},
 		onClick: ()=>{
-			const linearGradient = Array(2).fill(0).map(()=> Array(3).fill(0).map(()=>Math.floor(Math.random() * 256).toString(16)).join(''))
+			const linearGradient = Array(2).fill(0).map(()=> Array(3).fill(0)
+			.map((value)=>{
+				 value = Math.floor(Math.random() * 256).toString(16)
+				 if (value.length === 2) return value;
+				 return '0' + value;
+			}).join(''))
 			targetEl.style.background = `linear-gradient(to right,#${linearGradient[0]},#${linearGradient[1]})`;
 			this.setLinearGradient(linearGradient);
 		},
