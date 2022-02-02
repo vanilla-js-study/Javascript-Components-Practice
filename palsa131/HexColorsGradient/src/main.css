@@ -6,6 +6,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	display:flex;
+	flex-direction: column;
 	justify-content: center;
 }
 #app > button{
@@ -13,7 +14,7 @@ body{
 	border-radius: 4px;
 	padding: 0.25rem 0.75rem;
 	align-self: center;
-	background-color: inherit;
+	background-color: #fff;
 	color: #343a40;
 	border-color: #343a40;
 	cursor: pointer;
@@ -31,5 +32,18 @@ body{
 	ease-in-out,box-shadow .15s;
 }
 #app > button:focus{
-	box-shadow: 0 0 0 0.2rem rgb(52 58 64 / 50%);;
+	box-shadow: 0 0 0 0.2rem rgb(52 58 64 / 50%);
+}
+.gradientText {
+	text-align: center;
+	align-self: center;
+	animation: color-change 5s infinite alternate;
+}
+@keyframes color-change {
+	0% { color: #fff }
+	20% { color: #ccc }
+	40% { color: #999 }
+	60% { color: #666 }
+	80% { color: #333 }
+	100% { color: #fff }
 }

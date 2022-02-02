@@ -11,10 +11,12 @@ export default function App({targetEl}){
 	}
 
 	const guideTextEl = document.createElement('h1');
+	guideTextEl.className = 'gradientText'
 	guideTextEl.textContent = 'CLICK THE BUTTON BELLOW TO GENERATE A RANDOM GRADIENT HEX COLOR COMBINATION'
 
 	const backgroundInfoTextEl = document.createElement('h2');
-	
+	backgroundInfoTextEl.className = 'gradientText'
+
 	targetEl.appendChild(guideTextEl);
 	targetEl.appendChild(backgroundInfoTextEl);
 
