@@ -8,9 +8,6 @@ function App({ $target }) {
   isCalledWithNew(new.target);
 
   this.$target = $target;
-  this.state = {
-    colors: ['#ffffff', '#ffffff'],
-  };
 
   this.setState = (nextState) => {
     this.state = nextState;
@@ -29,11 +26,11 @@ function App({ $target }) {
     }))();
   const $colorSpan1 = new ColorSpan({
     $target: document.querySelector('#hexcode1'),
-    initialState: this.state.colors[0],
+    initialState: '#ffffff',
   });
   const $colorSpan2 = new ColorSpan({
     $target: document.querySelector('#hexcode2'),
-    initialState: this.state.colors[1],
+    initialState: '#ffffff',
   });
   (() =>
     new Button({
