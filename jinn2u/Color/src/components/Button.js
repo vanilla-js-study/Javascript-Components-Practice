@@ -28,7 +28,11 @@ function Button({ $target, text, onBtnClick }) {
     }
     return true;
   };
-  $button.addEventListener('click', this.onBtnClick);
+  $button.addEventListener('click', () => {
+    const randomHexColor = () => `#${Math.round(Math.random()*0xFFFFFF).toString(16)}`
+    this.onBtnClick(randomHexColor(), randomHexColor())
+    
+  });
   this.render();
 }
 export default Button;
