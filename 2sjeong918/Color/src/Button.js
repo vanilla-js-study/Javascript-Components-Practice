@@ -7,7 +7,6 @@ export default function Button({ $target, onClick }) {
   $target.appendChild($button);
 
   $button.addEventListener("click", (e) => {
-    e.preventDefault();
     onClick();
   });
 }

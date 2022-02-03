@@ -37,9 +37,7 @@ export default function App({ $target }) {
   };
 
   this.render = () => {
-    const { r } = this.state;
-    const { g } = this.state;
-    const { b } = this.state;
+    const { r, g, b } = this.state;
     $container.style.backgroundColor = `rgb(${r},${g},${b})`;
   };
 
